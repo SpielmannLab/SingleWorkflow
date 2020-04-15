@@ -14,9 +14,9 @@ Options:
   --jobname=<value>    Descriptive name.
   --genome=<value>     Genome string eg. mm10.
 
-Author: 
+Author:
   Cesar Prada
-e-mail: 
+e-mail:
   prada@molgen.mpg.de
 
 "-> doc
@@ -48,12 +48,12 @@ if (!requireNamespace("BiocManager", quietly = TRUE)) {
 #devtools::install_github('cole-trapnell-lab/monocle3')
 
 #
-supressMessages(library(monocle3))
+suppressMessages(library(monocle3))
 #
 
 # --- Parameters
 
-inputfolder <- arguments$infolder 
+inputfolder <- arguments$infolder
 outputfolder <- arguments$outfolder
 jobname <- arguments$jobname
 `genome` <- arguments$genome
@@ -67,5 +67,5 @@ cds_file <- paste0(outputfolder, '/', jobname, '.rds')
 
 saveRDS(cds, file = cds_file)
 
-message(paste("The cell_data_set object (Monocle3)", 
+message(paste("The cell_data_set object (Monocle3)",
 	      cds_file, "has been created."))
